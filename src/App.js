@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import {WrapperUI} from "./modules/ui/components/WrapperUI";
+import {Contacts} from "./modules/contacts/components/Contacts/Contacts";
+import {ContainerUI} from "./modules/ui/components/ContainerUI";
+import {ThemeToggle} from "./modules/ui/components/ThemeToggle";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <WrapperUI>
+            <ContainerUI>
+                <ThemeToggle/>
+                <Contacts/>
+            </ContainerUI>
+        </WrapperUI>
+    );
 }
-
 export default App;
